@@ -1,0 +1,355 @@
+.conversationContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+/* .conversationsList {
+  height: 100%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+} */
+.convoDetailsBody {
+  height: 100%;
+  width: 100%;
+  border-left: 1px solid #dbdbdb;
+  display: flex;
+  flex-direction: column;
+}
+.convoDetailsBodySection1 {
+  height: 20%;
+  width: 100%;
+  position: relative;
+  background: linear-gradient(
+      180.43deg,
+      rgba(250, 250, 250, 0) 0%,
+      #fafafa 90%,
+      #ffffff 100%
+    ),
+    url("/public/Images/backgroundImg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+.convoDetailsBodySection2 {
+  /* padding-left: 30px;
+    padding-right: 30px; */
+  margin-top: -19px;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.convoDetailsBodySection2Title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31.32px;
+  text-align: left;
+}
+.convoDetailsBodySection2options {
+  display: flex;
+  gap: 10px;
+}
+.convoDetailsBodySection2Main {
+  padding-left: 30px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.option {
+  width: 20px;
+  height: 20px;
+  padding: 7px;
+  border-radius: 10px;
+  border: 1px solid #dbdbdb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.TitleFlexCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+.iconSpan {
+  width: 16px;
+  height: 16px;
+}
+.DescFlexCard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.paragraph {
+  margin: 0px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.paragraph2 {
+  margin: 0px;
+  font-size: 12px;
+  color: #717274;
+}
+.InfoCards {
+  display: flex;
+  gap: 15px;
+  /* height: 88px; */
+  margin-top: 17px;
+  flex-wrap: wrap;
+}
+.InfoCard {
+  width: 168px;
+  height: 78px;
+  padding: 4px;
+  gap: 6px;
+  border-radius: 8px;
+  border: 0.5px solid #dbdbdb;
+}
+.topLevelInfoCard {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.topLevelInfoCardParagraph {
+  font-size: 14px;
+  margin: 0px;
+  font-weight: bolder;
+}
+.bottomLevelparagraph {
+  font-size: 11px;
+  margin: 0px;
+  padding: 10px;
+}
+.sectionTabs {
+  display: flex;
+  margin-top: 37px;
+  gap: 15px;
+}
+
+.tab-main {
+  text-align: left;
+}
+.tab-title {
+  font-size: 17px;
+  font-weight: bold;
+}
+.active {
+  color: #e50050;
+}
+.tab-number {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.separator {
+  width: 10%;
+  height: 1px;
+  background-color: #e50050;
+  border: none;
+  margin-top: 10px;
+}
+.tab-section-content {
+  flex-grow: 1;
+  width: 100%;
+
+  /* position: relative; */
+}
+.tab-section-content::-webkit-scrollbar {
+    display: none;
+  }
+.tab-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap:15px
+}
+.tab-content-items {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.tab-content-items-section1 {
+  padding-left: 30px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.tab-content-items-section2 {
+  padding-right: 30px;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.tab-content-items-section1-img {
+  height: 40px;
+  width: 40px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px;
+}
+.tab-content-items-section1-name {
+  font-size: 14px;
+  line-height: 17.64px;
+  letter-spacing: 1.1px;
+  text-align: left;
+  font-family: "Samsung Sharp Sans Bold", sans-serif !important;
+  font-weight: lighter;
+}
+.divider {
+  height: 20px;
+  width: 1px;
+  background-color: #e2e2e2;
+  margin: 0 10px;
+}
+.tab-content-items-section1-lastSeen {
+    font-size: 12px;
+    color: #717274;
+}
+.conversationList-title{
+  width: 30%;
+  padding-top: 3%;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  gap:4%
+}
+.conversationList-content{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.conversationList-content::-webkit-scrollbar {
+  display: none;
+}
+.conversationList-title-title{
+display: flex;
+justify-content: space-between;
+}
+.conversationList-title-p{
+  margin: 0px;
+  font-size: 13px;
+}
+.sortMenu{
+  width: 100%;
+  display: flex;
+  gap:10px;
+  justify-content: space-between;
+}
+.sortMenu p{
+font-size: 11px;
+font-weight: bold;
+}
+.inputBox{
+  width: 100%;
+}
+.conversationList-title-title-h1{
+  margin: 0px;
+}
+.conversationList-input {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  box-sizing: border-box; 
+}
+.pred{
+  color: red;
+}
+.search-box {
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.search-box input[type="text"] {
+  width: 100%;
+  padding: 15px 40px 15px 15px; 
+  border-radius: 10px;
+  border: 1px solid #DBDBDB; 
+  outline: none;
+  background-color: #ffffff;
+  font-size: 14px;
+  box-shadow: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box; 
+  background-image: url('/public/Icons/inputSearch.svg');
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+}
+.search-box input[type="text"]::placeholder {
+  color: #A9A9A9;
+  font-size: 12px;
+  font-style: italic;
+}
+
+
+
+.convoItem{
+  width: 100%;
+  display: flex;
+  gap:10px
+}
+.convoItem img{
+  object-fit: cover;
+  object-position: left;
+  border-radius: 10px;
+}
+.convoItem-content{
+  width: 100%;
+  height: 100px;
+}
+.content-1{
+  width: 100%;
+  height: 50px;
+  padding-top: 5px;
+}
+.content-1 p{
+  margin: 0px;
+}
+.content-1-title{
+  font-size: 16px;
+  font-weight: 700;
+
+}
+.content-1-lastShared{
+font-size: 13px;
+font-weight: 700;
+padding-top: 10px;
+color: #717274;
+}
+.content-2 p{
+  font-size: 13px;
+  color: #A9A9A9;
+}
+.content-2{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .convoDetailsBody {
+    height: 100%;
+    width: 100%;
+  }
+  .InfoCard {
+    width: 138px;
+    height: 66px;
+  }
+  .tab-section-content {
+    flex-grow: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+    .tab-section-content {
+  overflow-y: auto;
+    }
+    .conversationList-content{
+      overflow-y: auto;
+    }
+}
