@@ -1,0 +1,38 @@
+[
+    {
+      "image": "/Images/convo1.jpg",
+      "title": "Meet New Paperflite",
+      "lastShared": "Shared 4 hours ago",
+      "active": false,
+      "usedBy": "Kevin +6 more"
+    },
+    {
+      "image": "/Images/convo2.jpg",
+      "title": "Collection “seeeek”",
+      "lastShared": "Shared 1 month ago",
+      "active": true,
+      "usedBy": "Rhonald"
+    },
+    {
+      "image": "/Images/convo1.jpg",
+      "title": "Indira Gandhi International Ai...",
+      "lastShared": "Shared 4 hours ago",
+      "active": false,
+      "usedBy": "Kevin +6 more"
+    },
+    {
+      "image": "/Images/convo2.jpg",
+      "title": "Paperflite Originals",
+      "lastShared": "Shared 4 hours ago",
+      "active": false,
+      "usedBy": "Rhonald"
+    },
+    {
+      "image": "/Images/convo1.jpg",
+      "title": "Meet New Paperflite",
+      "lastShared": "Shared 4 hours ago",
+      "active": false,
+      "usedBy": "Kevin +6 more"
+    }
+  ]
+  

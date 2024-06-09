@@ -1,45 +1,22 @@
-import React from "react";
+import React, { useReducer } from "react";
 import ConvoDetails from "./ConvoDetails";
 import "./Main.css";
+import conversationsData  from '../../data/conversations.json'
+const initialState = {
+  conversations: conversationsData,
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'SET_CONVERSATIONS':
+      return { ...state, conversations: action.payload };
+    default:
+      return state;
+  }
+};
 const Maincontent = ({ displayWidth }) => {
-  const conversationList = [
-    {
-      image: "/Images/convo1.jpg",
-      title: "Meet New Paperflite",
-      lastShared: "Shared 4 hours ago",
-      active: false,
-      usedBy: "Kevin +6 more",
-    },
-    {
-      image: "/Images/convo2.jpg",
-      title: "Collection “seeeek”",
-      lastShared: "Shared 1 month ago",
-      active: true,
-      usedBy: "Rhonald",
-    },
-    {
-      image: "/Images/convo1.jpg",
-      title: "Indira Gandhi International Ai...",
-      lastShared: "Shared 4 hours ago",
-      active: false,
-      usedBy: "Kevin +6 more",
-    },
-    {
-      image: "/Images/convo2.jpg",
-      title: "Paperflite Originals",
-      lastShared: "Shared 4 hours ago",
-      active: false,
-      usedBy: "Rhonald",
-    },
-    {
-      image: "/Images/convo1.jpg",
-      title: "Meet New Paperflite",
-      lastShared: "Shared 4 hours ago",
-      active: false,
-      usedBy: "Kevin +6 more",
-    }
-    
-  ];
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
     <div className="conversationContainer">
       {displayWidth >= 768 ? (
@@ -77,7 +54,7 @@ const Maincontent = ({ displayWidth }) => {
               </div>
             </div>
              <div className="conversationList-content">
-            {conversationList.map(convo=>(
+            {state.conversations?.map(convo=>(
                 <div className="convoItem cursorPointer">
                     <img height={100} width={90} src={convo.image} alt="" />
                     <div className="convoItem-content">
@@ -93,7 +70,6 @@ const Maincontent = ({ displayWidth }) => {
             ))}
           </div>
           </div>
-         
       ) : null}
       <ConvoDetails displayWidth={displayWidth} />
     </div>

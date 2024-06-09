@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useReducer } from "react";
 import "./Main.css";
+import conversationDetails from '../../data/conversationDetails.json'
+
+const initialState = {
+  conversationsDetails: conversationDetails,
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'SET_CONVERSATIONS_DETAILS':
+      return { ...state, conversationsDetails: action.payload };
+    default:
+      return state;
+  }
+};
 
 const ConvoDetails = ({displayWidth}) => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   const infoCardsArray = [
     {
       value: "50%",
@@ -36,35 +52,6 @@ const ConvoDetails = ({displayWidth}) => {
       isActive: false,
     },
   ];
-  const tabData=[
-    {
-        profile:'/Images/profile1.jpg',
-        name:'James Clark',
-        lastView:'last viewed 02 Jan 2024',
-        time:'~85m',
-    }, {
-        profile:'/Images/profile2.jpg',
-        name:'Elizabeth Carol',
-        lastView:'last viewed 02 Jan 2024',
-        time:'~85m',
-    }, {
-        profile:'/Images/profile3.jpg',
-        name:'Michael',
-        lastView:'last viewed 02 Jan 2024',
-        time:'~85m',
-    }, {
-        profile:'/Images/profile4.jpg',
-        name:'Pamela Jack',
-        lastView:'last viewed 02 Jan 2024',
-        time:'~85m',
-    }, {
-        profile:'/Images/profile5.jpg',
-        name:'Pamela Jack',
-        lastView:'last viewed 02 Jan 2024',
-        time:'~85m',
-    },
-    
-  ]
   return (
     <div className="convoDetailsBody">
       <div className="convoDetailsBodySection1" />
@@ -141,7 +128,7 @@ const ConvoDetails = ({displayWidth}) => {
         </div>
         <div className="tab-section-content">
             <div className="tab-content">
-            {tabData.map(content=>(<div className="tab-content-items">
+            {state.conversationsDetails?.map(content=>(<div className="tab-content-items">
                 <div className="tab-content-items-section1">
                     <img className="tab-content-items-section1-img cursorPointer" height={40} width={40} alt='' src={content.profile} />
                     <p className="tab-content-items-section1-name cursorPointer">{content.name}</p>
